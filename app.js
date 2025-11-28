@@ -1,13 +1,13 @@
 const dateChecker = (dates) => {
     const pureDates = dates.filter(el => {
-        if(typeof el !== string) return false
+        if(typeof el !== 'string') return false
 
         if(el.includes('/')){
             const splitedDate = el.split('/')
 
             if(splitedDate.length !== 3) return false
 
-            const [month, day, year] = splitedDate
+            let [month, day, year] = splitedDate
 
             day = Number(day)
             month= Number(month)
@@ -27,7 +27,7 @@ const dateChecker = (dates) => {
 
             if(splitedDate.length !== 3) return false
 
-            const [day, month, year] = splitedDate
+            let [day, month, year] = splitedDate
 
             day = Number(day)
             month= Number(month)
